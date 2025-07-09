@@ -17,7 +17,7 @@ Built with **Python**, **Machine Learning**, and **Streamlit** — just upload y
 
 ## 🌐 Live Demo
 
-🔗 [Click to Try the App](https://yourusername-employee-attrition.streamlit.app)
+🔗 [Click to Try the App](https://SouravSreelan-employee-attrition.streamlit.app)
 
 ---
 
@@ -25,8 +25,8 @@ Built with **Python**, **Machine Learning**, and **Streamlit** — just upload y
 
 ```bash
 # 1. Clone this repo
-git clone https://github.com/yourusername/employee-attrition-app
-cd employee-attrition-app
+git clone https://github.com/SouravSreelan/mployee-attrition-streamlit
+cd mployee-attrition-streamlit
 
 # 2. Install dependencies
 pip install -r requirements.txt
