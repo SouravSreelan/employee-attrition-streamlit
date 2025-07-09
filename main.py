@@ -5,8 +5,8 @@ import plotly.express as px
 import joblib
 
 # Load model and encoders
-model = joblib.load("scripts/attrition_model.pkl")
-label_encoders = joblib.load("scripts/label_encoders.pkl")
+model = joblib.load("attrition_model.pkl")
+label_encoders = joblib.load("label_encoders.pkl")
 
 st.title("🔍 Employee Attrition Predictor")
 
