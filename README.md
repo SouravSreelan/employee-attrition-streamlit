@@ -17,7 +17,7 @@ Built with **Python**, **Machine Learning**, and **Streamlit** — just upload y
 
 ## 🌐 Live Demo
 
-🔗 [Click to Try the App]([https://yourusername-employee-attrition.streamlit.app](https://employee-attrition-app-t8tcpjf4xvsrrwd5zuxekn.streamlit.app/))
+🔗 [Try the App Now](https://employee-attrition-app-t8tcpjf4xvsrrwd5zuxekn.streamlit.app/)
 
 ---
 
