@@ -37,15 +37,5 @@ python train_model.py
 # 4. Run the app
 streamlit run main.py
 
----
 
-## 📥 Example Input (CSV Format)
-
-Make sure your uploaded CSV looks like this:
-
-```csv
-Age,Department,JobRole,OverTime,MonthlyIncome,YearsAtCompany
-35,Sales,Sales Executive,Yes,5000,5
-42,Research & Development,Laboratory Technician,No,4200,7
-29,Human Resources,Human Resources,Yes,3900,2
 
