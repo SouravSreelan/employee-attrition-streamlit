@@ -4,7 +4,6 @@ import matplotlib.pyplot as plt
 import plotly.express as px
 import joblib
 
-# Load model and encoders
 model = joblib.load("attrition_model.pkl")
 label_encoders = joblib.load("label_encoders.pkl")
 
@@ -15,13 +14,11 @@ uploaded_file = st.file_uploader("📁 Upload employee data CSV", type=["csv"])
 if uploaded_file:
     data = pd.read_csv(uploaded_file)
 
-    # Drop unused columns
     drop_cols = ["EmployeeNumber", "Over18", "EmployeeCount", "StandardHours", "Attrition"]
     for col in drop_cols:
         if col in data.columns:
             data = data.drop(col, axis=1)
 
-    # Encode categorical columns
     for col in data.columns:
         if col in label_encoders:
             le = label_encoders[col]
@@ -30,7 +27,6 @@ if uploaded_file:
     st.subheader("📊 Uploaded Data")
     st.dataframe(data)
 
-    # Predict
     predictions = model.predict(data)
     data["Attrition_Predicted"] = predictions
     data["Attrition_Predicted"] = data["Attrition_Predicted"].map({0: "No", 1: "Yes"})
@@ -38,7 +34,6 @@ if uploaded_file:
     st.subheader("🧠 Prediction Results")
     st.dataframe(data[["Attrition_Predicted"]])
 
-    # Pie Chart: Attrition Summary
     st.subheader("📈 Attrition Prediction Summary")
 
     attr_counts = data["Attrition_Predicted"].value_counts()
@@ -47,7 +42,6 @@ if uploaded_file:
     ax1.axis('equal')
     st.pyplot(fig1)
 
-    # Optional: Bar Chart by Job Role (if column exists)
     if "JobRole" in uploaded_file.name or "JobRole" in data.columns:
         try:
             raw_df = pd.read_csv(uploaded_file)
@@ -62,5 +56,4 @@ if uploaded_file:
         except Exception as e:
             st.warning(f"Could not visualize JobRole breakdown: {e}")
 
-    # Download predictions
     st.download_button("⬇ Download Predictions", data.to_csv(index=False), "attrition_predictions.csv", "text/csv")
