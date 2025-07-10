@@ -25,8 +25,8 @@ Built with **Python**, **Machine Learning**, and **Streamlit** — just upload y
 
 ```bash
 # 1. Clone this repo
-git clone https://github.com/SouravSreelan/mployee-attrition-streamlit
-cd mployee-attrition-streamlit
+git clone https://github.com/SouravSreelan/employee-attrition-streamlit.git
+cd employee-attrition-streamlit
 
 # 2. Install dependencies
 pip install -r requirements.txt
