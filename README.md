@@ -36,6 +36,11 @@ python train_model.py
 
 # 4. Run the app
 streamlit run main.py
+```
 
+---
+## 📚 Dataset Credit
 
+IBM HR Analytics Employee Attrition Dataset  
+Source: https://www.kaggle.com/datasets/pavansubhasht/ibm-hr-analytics-attrition-dataset
 
