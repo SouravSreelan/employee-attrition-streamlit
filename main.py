@@ -7,7 +7,7 @@ import joblib
 model = joblib.load("attrition_model.pkl")
 label_encoders = joblib.load("label_encoders.pkl")
 
-st.title("🔍 Employee Attrition Predictor")
+st.title("Employee Attrition Predictor")
 
 uploaded_file = st.file_uploader("📁 Upload employee data CSV", type=["csv"])
 
