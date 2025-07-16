@@ -31,7 +31,7 @@ if uploaded_file:
     data["Attrition_Predicted"] = predictions
     data["Attrition_Predicted"] = data["Attrition_Predicted"].map({0: "No", 1: "Yes"})
 
-    st.subheader("🧠 Prediction Results")
+    st.subheader("Prediction Results")
     st.dataframe(data[["Attrition_Predicted"]])
 
     st.subheader("📈 Attrition Prediction Summary")
