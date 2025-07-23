@@ -34,7 +34,7 @@ if uploaded_file:
     st.subheader("Prediction Results")
     st.dataframe(data[["Attrition_Predicted"]])
 
-    st.subheader("📈 Attrition Prediction Summary")
+    st.subheader("📈 Attrition Prediction Summary ")
 
     attr_counts = data["Attrition_Predicted"].value_counts()
     fig1, ax1 = plt.subplots()
