@@ -56,4 +56,4 @@ if uploaded_file:
         except Exception as e:
             st.warning(f"Could not visualize JobRole breakdown: {e}")
 
-    st.download_button("⬇ Download Predictions", data.to_csv(index=False), "attrition_predictions.csv", "text/csv")
+    st.download_button("⬇ Download Predictions ", data.to_csv(index=False), "attrition_predictions.csv", "text/csv")
