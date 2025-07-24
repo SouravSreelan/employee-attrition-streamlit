@@ -14,6 +14,7 @@ Built with **Python**, **Machine Learning**, and **Streamlit** — just upload y
 ✅ Runs in the browser — no setup needed!
 
 
+
 ---
 
 ## 🌐 Live Demo
@@ -37,6 +38,7 @@ python train_model.py
 
 # 4. Run the app
 streamlit run main.py
+
 ```
 
 ---
