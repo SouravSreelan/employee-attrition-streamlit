@@ -9,7 +9,7 @@ label_encoders = joblib.load("label_encoders.pkl")
 
 st.title("Employee Attrition Predictor")
 
-uploaded_file = st.file_uploader("📁 Upload employee data CSV", type=["csv"])
+uploaded_file = st.file_uploader("Upload employee data CSV", type=["csv"])
 
 if uploaded_file:
     data = pd.read_csv(uploaded_file)
@@ -47,6 +47,7 @@ if uploaded_file:
             raw_df = pd.read_csv(uploaded_file)
             merged_df = raw_df.copy()
             merged_df["Attrition_Predicted"] = data["Attrition_Predicted"]
+            
             if "JobRole" in label_encoders:
                 inv_le = label_encoders["JobRole"]
                 merged_df["JobRole"] = merged_df["JobRole"].map(lambda x: inv_le.inverse_transform([x])[0] if isinstance(x, int) else x)
@@ -57,3 +58,4 @@ if uploaded_file:
             st.warning(f"Could not visualize JobRole breakdown: {e}")
 
     st.download_button("⬇ Download Predictions ", data.to_csv(index=False), "attrition_predictions.csv", "text/csv")
+
