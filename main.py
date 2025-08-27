@@ -7,7 +7,7 @@ import joblib
 model = joblib.load("attrition_model.pkl")
 label_encoders = joblib.load("label_encoders.pkl")
 
-st.title("Employee Attrition Predictor")
+st.title("Employee Attrition Predictor") 
 
 uploaded_file = st.file_uploader("Upload employee data CSV", type=["csv"])
 
@@ -33,7 +33,6 @@ if uploaded_file:
 
     st.subheader("Prediction Results")
     st.dataframe(data[["Attrition_Predicted"]])
-
     st.subheader("📈 Attrition Prediction Summary ")
 
     attr_counts = data["Attrition_Predicted"].value_counts()
