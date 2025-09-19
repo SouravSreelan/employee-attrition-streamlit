@@ -6,7 +6,6 @@ from sklearn.metrics import accuracy_score
 import joblib
 
 df = pd.read_csv(r"D:\mODEL\employee-attrition-automation\data\WA_Fn-UseC_-HR-Employee-Attrition.csv")
-
 df = df.drop(["EmployeeNumber", "Over18", "EmployeeCount", "StandardHours"], axis=1)
 
 label_encoders = {}
@@ -27,3 +26,4 @@ joblib.dump(label_encoders, "label_encoders.pkl")
 
 y_pred = model.predict(X_test)
 print(f"Model Accuracy: {accuracy_score(y_test, y_pred):.2f}")
+
