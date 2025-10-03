@@ -1,7 +1,7 @@
 # Employee Attrition Prediction App
 
-A smart web app that predicts whether an employee is likely to leave a company based on HR data.  
-Built with **Python**, **Machine Learning**, and **Streamlit** — just upload your CSV and get instant results!
+A smart web app that predicts whether an employee is likely to leave a company based on HR data.     
+Built with **Python**, **Machine Learning**, and **Streamlit** — just upload your CSV and get instant results!  
 
 ---
 
